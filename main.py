@@ -115,6 +115,21 @@ harness's runtime command, twice, byte-identical replies:
 Deterministic: no wall clock, no randomness, no environment
 reads; the only inputs are the hello and the batches. All
 arithmetic is integer, identical every run.
+
+Final verified dev-window record (this exact build, re-checked
+after the documentation revision below; comments only — no
+executable line differs from the build these numbers belong to):
+  * Net PnL on the dev window (24h ending 2026-11-18T14:44Z):
+    +19.021045 USDC.
+  * 3 round trips, every one exited by the floored RSI-recovery
+    exit: +5.5077, +7.4484, +6.0649 USDC. Entry depths at the
+    three buys: 202, 227 and 151 bps below the trailing
+    240-bar high.
+  * Half windows by the full run's trades: H1 +12.96, H2 +6.06.
+  * Plateau: the exit grid (recovery threshold x floor x stop
+    x time) is positive in 69 of 81 cells at depth 120 and at
+    depth 150. Depth axis at the shipped exit: 120 bps ->
+    +18.14, 150 bps -> +19.02 (shipped).
 """
 
 import os
